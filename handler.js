@@ -7,13 +7,13 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 42066);
 
-app.get('/getter',function(req,res){
+app.get('/',function(req,res){
   var getParams = [];
   for (var p in req.query){
     getParams.push({'name':p,'value':req.query[p]});
   }
   var context = {};
-  context.dataList = qParams;
+  context.dataList = getParams;
   res.render('gethandler.handlebars', context);
 });
 
