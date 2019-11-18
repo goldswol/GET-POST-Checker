@@ -7,7 +7,7 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 42066);
 
-app.get('/',function(req,res){
+app.get('/getter',function(req,res){
   var getParams = [];
   for (var p in req.query){
     getParams.push({'name':p,'value':req.query[p]});
