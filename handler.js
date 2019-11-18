@@ -8,12 +8,14 @@ app.set('view engine', 'handlebars');
 app.set('port', 42066);
 
 app.get('/',function(req,res){
-  var getParams = [];
+  /*var getParams = [];
   for (var p in req.query){
     getParams.push({'name':p,'value':req.query[p]});
   }
   var context = {};
-  context.dataList = getParams;
+  context.dataList = getParams;*/
+  var context = {};
+  context.content = "test";
   res.render('gethandler.handlebars', context);
 });
 
