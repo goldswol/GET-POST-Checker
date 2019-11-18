@@ -12,12 +12,7 @@ app.get('/',function(req, res){
 });
 
 app.get('/getter',function(req,res){
-  var getParams = [];
-  for (var p in req.query){
-    getParams.push({'name':p,'value':req.query[p]});
-  }
-  var context = {};
-  context.dataList = getParams;
+  var context = req.query;
   res.render('gethandler.handlebars', context);
 });
 
