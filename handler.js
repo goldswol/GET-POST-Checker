@@ -8,7 +8,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 42066);
 
 app.get('/',function(req,res){
-  res.render('home.handlebars'); //We can omit the .handlebars extension as we do below
+  res.render('gethandler.handlebars'); //We can omit the .handlebars extension as we do below
 });
 
 app.post('/',function(req, res){
