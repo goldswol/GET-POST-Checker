@@ -8,7 +8,13 @@ app.set('view engine', 'handlebars');
 app.set('port', 42066);
 
 app.get('/',function(req,res){
-  res.render('gethandler.handlebars'); //We can omit the .handlebars extension as we do below
+  var getParams = [];
+  for (var p in req.query){
+    getParams.push({'name':p,'value':req.query[p]});
+  }
+  var context = {};
+  context.dataList = qParams;
+  res.render('gethandler.handlebars', context);
 });
 
 app.post('/',function(req, res){
