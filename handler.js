@@ -15,14 +15,15 @@ app.get('/',function(req,res){
   }
   var context = {};
   context.dataList = getParams;*/
+  var getArray = [];
   var context = {};
   context.data = req.query;
-  console.log(context.data);
-  console.log(Object.keys(context.data));
+  //console.log(context.data);
+  //console.log(Object.keys(context.data));
   Object.keys(context.data).forEach(key=>{
-   console.log(`${key} : ${context.data[key]}`);
+   getArray.push({`name: ${key}, value: ${context[key]}`});
   });
-
+  context.dataList = gerArray;
   res.render('gethandler.handlebars', context);
 });
 
