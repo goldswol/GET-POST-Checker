@@ -18,9 +18,12 @@ app.get('/',function(req,res){
   var context = {};
   context.data = req.query;
   console.log(context.data);
-  //while (context.content !== {})
+  for (let key in context.data)
   {
-
+    if(obj.hasOwnProperty(key))
+    {
+      console.log('${key} : ${obj[key]}');
+    }
   }
   res.render('gethandler.handlebars', context);
 });
