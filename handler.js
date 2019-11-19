@@ -18,13 +18,7 @@ app.get('/',function(req,res){
   var context = {};
   context.data = req.query;
   console.log(context.data);
-  for (let key in context.data)
-  {
-    if(context.data.hasOwnProperty(key))
-    {
-      console.log(${key} : ${context.data[key]});
-    }
-  }
+  console.log(context.data.keys());
   res.render('gethandler.handlebars', context);
 });
 
