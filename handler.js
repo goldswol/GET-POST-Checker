@@ -15,7 +15,7 @@ app.get('/',function(req,res){
   var context = {};
   context.dataList = getParams;*/
   var context = {};
-  context.content = {'name':'test','value':req.query[1]};
+  context.content = {'name':'test','value':req.query};
   console.log(context.content);
   res.render('gethandler.handlebars', context);
 });
