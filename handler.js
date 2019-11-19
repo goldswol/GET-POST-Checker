@@ -22,7 +22,7 @@ app.get('/',function(req,res){
   {
     if(context.data.hasOwnProperty(key))
     {
-      console.log('${key} : ${context.data[key]}');
+      console.log(${key} : ${context.data[key]});
     }
   }
   res.render('gethandler.handlebars', context);
