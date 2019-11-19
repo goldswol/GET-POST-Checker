@@ -8,6 +8,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 42066);
 
 app.get('/',function(req,res){
+  //Note to self: req.query will look like { name: 'value', name: 'value' }
   /*var getParams = [];
   for (var p in req.query){
     getParams.push({'name':p,'value':req.query[p]});
@@ -15,7 +16,7 @@ app.get('/',function(req,res){
   var context = {};
   context.dataList = getParams;*/
   var context = {};
-  context.content = {'name':'test','value':req.query[1]};
+  context.content = req.query;
   console.log(context.content);
   res.render('gethandler.handlebars', context);
 });
