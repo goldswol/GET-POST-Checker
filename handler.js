@@ -22,7 +22,7 @@ app.get('/',function(req,res){
   {
 
   }
-  res.render('gethandler.handlebars', context);
+  res.render('gethandler.handlebars', content);
 });
 
 app.post('/',function(req, res){
