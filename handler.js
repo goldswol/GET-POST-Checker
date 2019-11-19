@@ -21,7 +21,7 @@ app.get('/',function(req,res){
   //console.log(context.data);
   //console.log(Object.keys(context.data));
   Object.keys(context.data).forEach(key=>{
-   getArray.push({`name: ${key}, value: ${context[key]}`});
+   getArray.push({`${key} : ${obj[key]}`});
   });
   context.dataList = gerArray;
   res.render('gethandler.handlebars', context);
