@@ -17,7 +17,7 @@ app.get('/',function(req,res){
   context.dataList = getParams;*/
   var content = {};
   content = req.query;
-  console.log(content.toString());
+  console.log(content);
   //while (context.content !== {})
   {
 
