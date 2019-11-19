@@ -15,14 +15,14 @@ app.get('/',function(req,res){
   }
   var context = {};
   context.dataList = getParams;*/
-  var content = {};
-  content = req.query;
-  console.log(content);
+  var context = {};
+  context.data = req.query;
+  console.log(context);
   //while (context.content !== {})
   {
 
   }
-  res.render('gethandler.handlebars', content);
+  res.render('gethandler.handlebars', context);
 });
 
 app.post('/',function(req, res){
