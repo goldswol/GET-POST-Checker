@@ -20,9 +20,9 @@ app.get('/',function(req,res){
   console.log(context.data);
   for (let key in context.data)
   {
-    if(obj.hasOwnProperty(key))
+    if(context.data.hasOwnProperty(key))
     {
-      console.log('${key} : ${obj[key]}');
+      console.log('${key} : ${context.data[key]}');
     }
   }
   res.render('gethandler.handlebars', context);
