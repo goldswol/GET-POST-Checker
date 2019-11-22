@@ -21,7 +21,8 @@ app.get('/',function(req,res){
   console.log(context.data);
   console.log(Object.keys(context.data));
   Object.keys(context.data).forEach(key=>{
-   console.log(`${key} : ${context.data[key]}`);
+   context.list.name = {key};
+   context.list.value = {context.data[key]};
   });
   res.render('gethandler.handlebars', context);
 });
